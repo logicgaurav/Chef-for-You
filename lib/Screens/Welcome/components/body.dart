@@ -11,7 +11,8 @@ class Body extends StatelessWidget {
           pages: [
             PageViewModel(
               title: 'Choose Online',
-              body: 'Like the main purpose of the app is the provide a restaurant style meal in the comfort of your Home ',
+              body:
+                  'Like the main purpose of the app is the provide a restaurant style meal in the comfort of your Home ',
               image: buildImage('assets/images/screenfour.jpeg'),
               decoration: getPageDecoration(),
             ),
@@ -29,7 +30,8 @@ class Body extends StatelessWidget {
             ),
             PageViewModel(
               title: 'High Preparations at Home',
-              body: 'Start your journey, Meal Preapared by one of our certified chefs.',
+              body:
+                  'Start your journey, Meal Preapared by one of our certified chefs.',
               footer: ButtonWidget(
                 text: 'Start Reading',
                 onClicked: () => goToHome(context),
@@ -38,19 +40,28 @@ class Body extends StatelessWidget {
               decoration: getPageDecoration(),
             ),
           ],
-          done: const Text('Read', style: TextStyle(fontWeight: FontWeight.w600,color: Colors.white,)),
+          done: const Text('Read',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              )),
           onDone: () => goToHome(context),
           showSkipButton: true,
-          skip: const Text('Skip',
-          style: TextStyle (color: Colors.white),),
+          skip: const Text(
+            'Skip',
+            style: TextStyle(color: Colors.white),
+          ),
 
           onSkip: () => goToHome(context),
-          next: const Icon(Icons.arrow_forward,
-          color: Colors.white,),
+          next: const Icon(
+            Icons.arrow_forward,
+            color: Colors.white,
+          ),
+          controlsPadding: const EdgeInsets.all(6),
           dotsDecorator: getDotDecoration(),
           onChange: (index) => print('Page $index selected'),
           globalBackgroundColor: Theme.of(context).primaryColor,
-         // dotsFlex: 0,
+          //dotsFlex: 0,
           //nextFlex: 0,
           // isProgressTap: false,
           // isProgress: false,
@@ -69,7 +80,7 @@ class Body extends StatelessWidget {
 
   DotsDecorator getDotDecoration() => DotsDecorator(
         color: const Color(0xFFBDBDBD),
-        //activeColor: Colors.orange,
+        activeColor: Colors.white,
         size: const Size(10, 10),
         activeSize: const Size(22, 10),
         activeShape: RoundedRectangleBorder(
@@ -78,9 +89,10 @@ class Body extends StatelessWidget {
       );
 
   PageDecoration getPageDecoration() => PageDecoration(
-        titleTextStyle: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        titleTextStyle:
+            const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         bodyTextStyle: const TextStyle(fontSize: 20),
-    bodyPadding: const EdgeInsets.all(16).copyWith(bottom: 0),
+        bodyPadding: const EdgeInsets.all(16).copyWith(bottom: 0),
         imagePadding: const EdgeInsets.all(24),
         pageColor: Colors.white,
       );

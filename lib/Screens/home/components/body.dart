@@ -1,8 +1,8 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:chef_for_you/constants.dart';
 import 'package:chef_for_you/models/Product.dart';
 import 'package:chef_for_you/screens/details/details_screen.dart';
+import 'package:getwidget/getwidget.dart';
 
 import 'categorries.dart';
 import 'item_card.dart';
@@ -13,22 +13,14 @@ class Body extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container(
-          height: 200,
-          child: Carousel(
-            dotSize: 6.0,
-            dotSpacing: 15.0,
-            dotPosition: DotPosition.bottomCenter,
-            images: [
-              Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
-              Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
-              Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
-              Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
-              Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
-              Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
-            ],
-          ),
-        ),
+        GFCarousel(height: 200, items: [
+          Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
+          Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
+          Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
+          Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
+          Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
+          Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight),
+        ]),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
           child: Text(

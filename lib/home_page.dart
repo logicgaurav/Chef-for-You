@@ -1,5 +1,5 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -27,23 +27,14 @@ class _MySliderState extends State<MySlider> {
       body: Center(
           child: ListView(
         children: [
-          SizedBox(
-            height: 200.0,
-            width: 300,
-            child: Carousel(
-              dotSize: 6.0,
-              dotSpacing: 15.0,
-              dotPosition: DotPosition.bottomCenter,
-              images: [
-                Image.asset('assets/images/logo.png', fit: BoxFit.cover),
-                Image.asset('assets/images/logo.png', fit: BoxFit.cover),
-                Image.asset('assets/images/logo.png', fit: BoxFit.cover),
-                Image.asset('assets/images/logo.png', fit: BoxFit.cover),
-                Image.asset('assets/images/logo.png', fit: BoxFit.cover),
-                Image.asset('assets/images/logo.png', fit: BoxFit.cover),
-              ],
-            ),
-          )
+          GFCarousel(height: 200, items: [
+            Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+            Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+            Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+            Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+            Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+            Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+          ])
         ],
       )),
     );
