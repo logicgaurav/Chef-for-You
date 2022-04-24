@@ -60,7 +60,7 @@ class Body extends StatelessWidget {
           controlsPadding: const EdgeInsets.all(6),
           dotsDecorator: getDotDecoration(),
           onChange: (index) => print('Page $index selected'),
-          globalBackgroundColor: Theme.of(context).primaryColor,
+          globalBackgroundColor: Colors.red,
           //dotsFlex: 0,
           //nextFlex: 0,
           // isProgressTap: false,
