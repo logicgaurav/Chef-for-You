@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
+      drawer: Drawer(child: ListView()),
     );
   }
 
@@ -16,29 +17,14 @@ class HomeScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      leading: IconButton(
-        icon: SvgPicture.asset(
-          "assets/icons/menu.svg",
-          // By default our  icon color is white
-          color: kTextColor,
-        ),
-        onPressed: () {},
-      ),
+      iconTheme: const IconThemeData(color: Colors.black),
       actions: <Widget>[
         IconButton(
-          icon: SvgPicture.asset(
-            "assets/icons/search.svg",
-            // By default our  icon color is white
-            color: kTextColor,
-          ),
+          icon: const Icon(Icons.search),
           onPressed: () {},
         ),
         IconButton(
-          icon: SvgPicture.asset(
-            "assets/icons/cart.svg",
-            // By default our  icon color is white
-            color: kTextColor,
-          ),
+          icon: const Icon(Icons.shopping_cart),
           onPressed: () {},
         ),
         SizedBox(width: kDefaultPaddin / 2)
